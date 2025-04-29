@@ -56,6 +56,26 @@ Control-M integration: Scripts optionally retrieve environment settings (like no
 
 Modular: Scripts can be run independently or chained together in automation flows.
 
+## GPG Commands Used by Scripts
+
+| Script | GPG Commands and Flow | 
+| ------ | ------- |
+| generate.key.sh | 1. Create key batch file  | 
+| | 2. Execute gpg --batch --generate-key batch_file to create keys | 
+| export.key.sh | 1. gpg --export --armor <key> to export public key   | 
+| |  2. gpg --export-secret-keys --armor <key> to export private key | 
+| import.key.sh | 1. gpg --import public.key | 
+| |  2. gpg --import private.key (both from JSON definition) | 
+| import.public.key.sh | 1. gpg --import public.key | 
+| import.private.key.sh | 1. gpg --import private.key | 
+| fingerprint.file.sh | 1. gpg --list-packets file.gpg to extract packet and fingerprint information | 
+| encrypt.file.sh | 1. Encrypt with gpg --output output.gpg --encrypt --recipient <user> file  (optional passphrase if specified) | 
+| delete.key.sh | 1. gpg --batch --yes --delete-secret-and-public-key <fingerprint> | 
+| delete.template.sh | (File system operation only, deletes key templates) | 
+| deploy.template.sh | (Copies templates to target environment, no direct GPG usage) | 
+
+
+
 
 # Overview
 
