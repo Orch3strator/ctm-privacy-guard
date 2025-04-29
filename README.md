@@ -9,6 +9,7 @@ Each script follows a common structure, including usage help (--help), colorful 
 ## 🛠 Available Scripts
 
 | Script | Purpose | 
+| ------ | ------- |
 | [generate.key.sh](/src/gpg/dsse.gpg.generate.key.sh) | Generate a new GPG private/public key pair | 
 | [export.key.sh](/src/gpg/export.key.sh) | Export an existing GPG key to files (public/private) | 
 | [import.key.sh](/src/gpg/dsse.gpg.import.key.sh) | Import a GPG key pair from a JSON template | 
