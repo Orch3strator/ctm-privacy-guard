@@ -75,6 +75,12 @@ Modular: Scripts can be run independently or chained together in automation flow
 | deploy.template.sh | Deploy PGP Template for Control-M Agent(s)  | 
 
 
+# Workflows
+
+The onboarding workflow for MFT Enterprise makes use of these scripts. They are embedded as OS job-type.
+[onboarding](/src/ctm/onboarding.json)
+
+
 # Overview
 
 Gnu Privacy Guard (GPG) is a free and open-source encryption tool designed to ensure the confidentiality, integrity, and authenticity of digital data. 
