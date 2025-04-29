@@ -170,10 +170,11 @@ Using a separate keyring can help organize keys and maintain different sets of k
 
 ## YouTube
 
-[Encryption with Control-M Managed File Transfer](https://youtu.be/U4gu-sdqNek)
+![Encryption with Control-M Managed File Transfer](https://youtu.be/U4gu-sdqNek)
 
 
-[How to use PGP with Control-M for Advanced File Transfer](https://youtu.be/D8hhMSz8z7g)
+![How to use PGP with Control-M for Advanced File Transfer](https://youtu.be/D8hhMSz8z7g)
 
-[PGP mit Control-M for File Transfer](https://youtu.be/PS6ew1S1f88)
+
+![PGP mit Control-M for File Transfer](https://youtu.be/PS6ew1S1f88)
 
