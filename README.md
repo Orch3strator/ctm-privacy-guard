@@ -14,31 +14,31 @@ GPG (Gnu Privacy Guard) Valuable Benefits
 
 Using Privacy Guard (Gnu Privacy Guard or GPG) in connection with managed file transfer (MFT) can offer several valuable benefits, driven by the need for secure and confidential data exchange:
 
-    - **Data Confidentiality**: GPG encryption ensures that data transferred via MFT remains confidential. Even if intercepted during transit or stored on remote servers, the encrypted data remains unreadable without the decryption key.
+- **Data Confidentiality**: GPG encryption ensures that data transferred via MFT remains confidential. Even if intercepted during transit or stored on remote servers, the encrypted data remains unreadable without the decryption key.
 
-    - **Data Integrity**: GPG provides digital signatures that verify the authenticity and integrity of transferred files. This guards against tampering or corruption during transmission.
+- **Data Integrity**: GPG provides digital signatures that verify the authenticity and integrity of transferred files. This guards against tampering or corruption during transmission.
 
-    - **Authentication**: GPG's public key infrastructure (PKI) enables users to verify the identity of the sender. This is crucial in MFT, where trust and authenticity are paramount.
+- **Authentication**: GPG's public key infrastructure (PKI) enables users to verify the identity of the sender. This is crucial in MFT, where trust and authenticity are paramount.
 
-    - **Compliance**: Many industries and regulatory frameworks (e.g., HIPAA, GDPR) require secure data exchange and compliance with data protection standards. GPG helps meet these compliance requirements.
+- **Compliance**: Many industries and regulatory frameworks (e.g., HIPAA, GDPR) require secure data exchange and compliance with data protection standards. GPG helps meet these compliance requirements.
 
-    - **Non-Repudiation**: GPG's digital signatures provide proof that a file was sent by a specific sender, helping in legal disputes where non-repudiation is necessary.
+- **Non-Repudiation**: GPG's digital signatures provide proof that a file was sent by a specific sender, helping in legal disputes where non-repudiation is necessary.
 
-    - **Secure Key Management**: GPG's key management features allow organizations to securely generate, store, and distribute encryption keys, ensuring the confidentiality of data at rest and in transit.
+- **Secure Key Management**: GPG's key management features allow organizations to securely generate, store, and distribute encryption keys, ensuring the confidentiality of data at rest and in transit.
 
-    - **Cross-Platform Compatibility**: GPG is available on various operating systems and supports multiple file formats, making it versatile for cross-platform MFT solutions.
+- **Cross-Platform Compatibility**: GPG is available on various operating systems and supports multiple file formats, making it versatile for cross-platform MFT solutions.
 
-    - **Cost-Effective**: GPG is open-source and free to use, reducing the cost of implementing secure file transfer solutions.
+- **Cost-Effective**: GPG is open-source and free to use, reducing the cost of implementing secure file transfer solutions.
 
-    - **Scalability**: GPG can scale to accommodate the needs of small to large organizations and adapt to growing MFT requirements.
+- **Scalability**: GPG can scale to accommodate the needs of small to large organizations and adapt to growing MFT requirements.
 
-    - **Interoperability**: GPG is widely adopted and can integrate with existing MFT systems and protocols, ensuring seamless data exchange with partners and clients.
+- **Interoperability**: GPG is widely adopted and can integrate with existing MFT systems and protocols, ensuring seamless data exchange with partners and clients.
 
-    - **Reduced Risk**: By encrypting sensitive data and ensuring data integrity, GPG reduces the risk of data breaches, leaks, and unauthorized access during file transfers.
+- **Reduced Risk**: By encrypting sensitive data and ensuring data integrity, GPG reduces the risk of data breaches, leaks, and unauthorized access during file transfers.
 
-    - **Secure Automation**: MFT often involves automated processes. GPG can be seamlessly integrated into automated workflows to ensure that data remains secure during automated transfers.
+- **Secure Automation**: MFT often involves automated processes. GPG can be seamlessly integrated into automated workflows to ensure that data remains secure during automated transfers.
 
-    In summary, the value drivers for using Privacy Guard (GPG) in connection with managed file transfer include data confidentiality, integrity, authentication, compliance, non-repudiation, and cost-effectiveness. GPG provides a robust security layer that enhances the reliability and trustworthiness of file transfers, making it a valuable tool for organizations dealing with sensitive data exchanges.
+In summary, the value drivers for using Privacy Guard (GPG) in connection with managed file transfer include data confidentiality, integrity, authentication, compliance, non-repudiation, and cost-effectiveness. GPG provides a robust security layer that enhances the reliability and trustworthiness of file transfers, making it a valuable tool for organizations dealing with sensitive data exchanges.
 
 
 
@@ -49,23 +49,22 @@ There are two types of encryption algorithms: symmetric (also called shared key 
 
 ### Process
 
-<Tabs>
-    <TabItem label="Asymmetric Process" icon="linux">
-        Asymmetric encryption uses two separate keys: a public key and a private key. 
-        Often a public key is used to encrypt the data while a private key is required to decrypt the data. 
-        The private key is only given to users with authorized access. As a result, asymmetric encryption can be more effective, but it is also more costly.
-    
-        ![Asymmetric encryption](../../../assets/images/pgp.asym.png)
+#### Asymmetric Process
 
-    </TabItem>
-    <TabItem label="Symmetric Process" icon="linux">
-        Symmetric encryption uses the same key for encryption and decryption. 
-        Because it uses the same key, symmetric encryption can be more cost effective for the security it provides. 
-        That said, it is important to invest more in securely storing data when using symmetric encryption.
+Asymmetric encryption uses two separate keys: a public key and a private key. 
+Often a public key is used to encrypt the data while a private key is required to decrypt the data. 
+The private key is only given to users with authorized access. As a result, asymmetric encryption can be more effective, but it is also more costly.
 
-        ![Symmetric encryption](../../../assets/images/pgp.sym.png)
-    </TabItem>
-  </Tabs>  
+![Asymmetric encryption](/images/pgp.asym.png)
+
+#### Symmetric Process 
+
+Symmetric encryption uses the same key for encryption and decryption. 
+Because it uses the same key, symmetric encryption can be more cost effective for the security it provides. 
+That said, it is important to invest more in securely storing data when using symmetric encryption.
+
+![Symmetric encryption](/images/pgp.sym.png)
+
 
 ### Building Block
 The building blocks of GPG (Gnu Privacy Guard) are the fundamental components and concepts that make up the encryption and cryptographic system.
@@ -180,56 +179,12 @@ Using a separate keyring in GPG to encrypt a file involves creating or utilizing
 
 #### Encrypt & Decrypt
 
-<Tabs syncKey="Platform">
-  <TabItem label="Linux" icon="linux">
-    ```sh title="Encrypt a File shell command"
-    gpg --homedir ~/my_separate_keyring --recipient recipient@email.com --encrypt file_to_encrypt
-    ``` 
-  </TabItem>
-  <TabItem label="Windows" icon="seti:windows">
-    ```sh title="Encrypt a File shell command"
-    TBD
-    ```
-  </TabItem>    
-</Tabs>
+gpg --homedir ~/my_separate_keyring --recipient recipient@email.com --encrypt file_to_encrypt
+
+gpg --homedir ~/my_separate_keyring --decrypt encrypted_file.gpg > decrypted_file
 
 
-<Tabs syncKey="Platform">
-  <TabItem label="Linux" icon="linux">
-    ```sh title="Decrypt a File shell command"
-    gpg --homedir ~/my_separate_keyring --decrypt encrypted_file.gpg > decrypted_file
-    ``` 
-  </TabItem>
-  <TabItem label="Windows" icon="seti:windows">
-    ```sh title="Decrypt a File shell command"
-    TBD
-    ```
-  </TabItem>    
-</Tabs>
 
 
 Using a separate keyring can help organize keys and maintain different sets of keys for various purposes, enhancing your operational security and flexibility in managing encrypted communications or files.
 
-
-## YouTube
-
-
-<YouTubeGrid
-	videos={[
-		{
-			href: 'https://youtu.be/U4gu-sdqNek',
-			title: 'Encryption with Control-M Managed File Transfer',
-			description: 'Privacy Guard with Control-M Managed File Transfer. Secure data at Rest, not just in Transit. Lay the foundation for a successful GPG decryption/encryption automation.'
-		},
-		{
-			href: 'https://youtu.be/D8hhMSz8z7g',
-			title: 'How to use PGP with Control-M for Advanced File Transfer',
-			description: 'This video solution demonstrates how to use the Control-M for Advanced File Transfer (AFT) PGP feature.'
-		},
-		{
-			href: 'https://youtu.be/PS6ew1S1f88',
-			title: 'PGP mit Control-M for File Transfer',
-			description: 'Dieses Video soll die PGP-Funktion innerhalb Control-M for File Transfer veranschaulichen.'
-		}
-	]}
-/>
