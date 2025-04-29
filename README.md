@@ -78,7 +78,8 @@ Modular: Scripts can be run independently or chained together in automation flow
 # Workflows
 
 The onboarding workflow for MFT Enterprise makes use of these scripts. They are embedded as OS job-type.
-[onboarding](/src/ctm/onboarding.json)
+
+- [MFTE External User Onboarding](/src/ctm/onboarding.json)
 
 
 # Overview
