@@ -147,34 +147,15 @@ Using a separate keyring in GPG to encrypt a file involves creating or utilizing
 
 #### Create a Separate Keyring
 
-<Steps>
-
 1. You need to create a new, separate keyring. You can do this by initializing a new keyring with a key generation command and specifying the keyring file. Let's create a new directory for our separate keyring and generate a new key pair in it.
 
-    <Tabs syncKey="Platform">
-      <TabItem label="Linux" icon="linux">
-        ```sh title="Create Separate Keyring shell command"
-        mkdir ~/my_separate_keyring
-        ```
-        ```sh frame=none
-        gpg --homedir ~/my_separate_keyring --full-generate-key
-        ```    
-      </TabItem>
-      <TabItem label="Windows" icon="seti:windows">
-        ```sh title="Create Separate Keyring shell command"
-        TBD
-        ```
-        ```sh frame=none
-        TBD
-        ```    
-      </TabItem>    
-    </Tabs>
+mkdir ~/my_separate_keyring
+
 
 2. Import Public Keys into the Separate Keyring. If you want to encrypt files for someone else using the separate keyring, you'll need to import their public key into it.
 
 3. Encrypt a File Using the Separate Keyring. Now, to encrypt a file using a key from the separate keyring, specify the --homedir option again to use the alternative keyring for the encryption operation.
 
-</Steps>
 
 
 #### Encrypt & Decrypt
