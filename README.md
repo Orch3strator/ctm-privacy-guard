@@ -24,6 +24,7 @@ Each script follows a common structure, including usage help (--help), colorful 
 ## 🖥 Common Parameters
 
 | Option | Description |
+| ------ | ------- |
 | --file | File input or output path (example: a JSON, GPG file, or key file) |
 | --directory | Working directory for file operations |
 | --name | GPG key name (user name) |
