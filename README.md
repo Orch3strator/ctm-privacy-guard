@@ -163,9 +163,17 @@ mkdir ~/my_separate_keyring
 gpg --homedir ~/my_separate_keyring --recipient recipient@email.com --encrypt file_to_encrypt
 
 gpg --homedir ~/my_separate_keyring --decrypt encrypted_file.gpg > decrypted_file
-
-
-
+ 
 
 Using a separate keyring can help organize keys and maintain different sets of keys for various purposes, enhancing your operational security and flexibility in managing encrypted communications or files.
+
+
+## YouTube
+
+[Encryption with Control-M Managed File Transfer](https://youtu.be/U4gu-sdqNek)
+
+
+[How to use PGP with Control-M for Advanced File Transfer](https://youtu.be/D8hhMSz8z7g)
+
+[PGP mit Control-M for File Transfer](https://youtu.be/PS6ew1S1f88)
 
