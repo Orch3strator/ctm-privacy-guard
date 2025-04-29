@@ -1,6 +1,9 @@
 # ctm-privacy-guard
 Control-M Privacy Guard Integration
 
+# Scripts
+
+[dsse.gpg.delete.key.sh]{/src/gpg/dsse.gpg.delete.key.sh}
 
 # Overview
 
