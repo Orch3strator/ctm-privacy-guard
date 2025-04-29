@@ -3,7 +3,26 @@ Control-M Privacy Guard Integration
 
 # Scripts
 
-[dsse.gpg.delete.key.sh](/src/gpg/dsse.gpg.delete.key.sh)
+- [delete.key.sh](/src/gpg/dsse.gpg.delete.key.sh)
+
+- [delete.template.sh](/src/gpg/dsse.gpg.delete.template.sh)
+
+- [deploy.template.sh](/src/gpg/dsse.gpg.deploy.template.sh)
+
+- [encrypt.file.sh](/src/gpg/encrypt.file.sh)
+
+- [export.key.sh](/src/gpg/export.key.sh)
+
+- [fingerprint.file.sh](/src/gpg/fingerprint.file.sh)
+
+- [generate.key.sh](/src/gpg/dsse.gpg.generate.key.sh)
+
+- [import.key.sh](/src/gpg/dsse.gpg.import.key.sh)
+
+- [import.private.key.sh](/src/gpg/dsse.gpg.import.private.key.sh)
+
+- [import.public.key.sh](/src/gpg/dsse.gpg.import.public.key.sh)
+
 
 # Overview
 
