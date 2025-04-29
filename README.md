@@ -3,25 +3,56 @@ Control-M Privacy Guard Integration
 
 # Scripts
 
-- [delete.key.sh](/src/gpg/dsse.gpg.delete.key.sh)
+These scripts provide a complete toolkit for managing GPG keys and GPG-encrypted files across Control-M agents and servers.
+Each script follows a common structure, including usage help (--help), colorful output, logging, and optional parameters.
 
-- [delete.template.sh](/src/gpg/dsse.gpg.delete.template.sh)
+## 🛠 Available Scripts
 
-- [deploy.template.sh](/src/gpg/dsse.gpg.deploy.template.sh)
+| Script | Purpose | 
+| [generate.key.sh](/src/gpg/dsse.gpg.generate.key.sh) | Generate a new GPG private/public key pair | 
+| [export.key.sh](/src/gpg/export.key.sh) | Export an existing GPG key to files (public/private) | 
+| [import.key.sh](/src/gpg/dsse.gpg.import.key.sh) | Import a GPG key pair from a JSON template | 
+| [import.public.key.sh](/src/gpg/dsse.gpg.import.public.key.sh)| Import a GPG public key only | 
+| [import.private.key.sh](/src/gpg/dsse.gpg.import.private.key.sh) | Import a GPG private key only | 
+| [fingerprint.file.sh](/src/gpg/fingerprint.file.sh) | Calculate fingerprint of a GPG encrypted file | 
+| [encrypt.file.sh](/src/gpg/encrypt.file.sh) | Encrypt a file for a given GPG recipient | 
+| [delete.key.sh](/src/gpg/dsse.gpg.delete.key.sh)| Delete GPG keys | 
+| [delete.template.sh](/src/gpg/dsse.gpg.delete.template.sh) | Delete GPG key files from templates | 
+| [deploy.template.sh](/src/gpg/dsse.gpg.deploy.template.sh) | Deploy a GPG key/template onto Control-M agents | 
 
-- [encrypt.file.sh](/src/gpg/encrypt.file.sh)
+## 🖥 Common Parameters
 
-- [export.key.sh](/src/gpg/export.key.sh)
+| Option | Description |
+| --file | File input or output path (example: a JSON, GPG file, or key file) |
+| --directory | Working directory for file operations |
+| --name | GPG key name (user name) |
+| --email | GPG email address |
+| --passphrase | Passphrase to protect or unlock a GPG key |
+| --recipient | GPG recipient email or user for encryption |
+| --node | (Optional) Target Control-M Node |
+| --environment | (Optional) Control-M environment name |
+| --help | Show the script's usage examples and exit |
 
-- [fingerprint.file.sh](/src/gpg/fingerprint.file.sh)
+## 🛡 Security and Logging
 
-- [generate.key.sh](/src/gpg/dsse.gpg.generate.key.sh)
+Logs are saved into:
 
-- [import.key.sh](/src/gpg/dsse.gpg.import.key.sh)
+./proclog/zzm/gpg.log (or /tmp/data/zzm/gpg.log if no write access)
 
-- [import.private.key.sh](/src/gpg/dsse.gpg.import.private.key.sh)
+Each script prints system and environment details for traceability.
 
-- [import.public.key.sh](/src/gpg/dsse.gpg.import.public.key.sh)
+Scripts verify working directories and will create them if necessary.
+
+
+## ⚙ Notes
+
+Pre-requisites: You must have gpg, awk, hostname, and bash installed.
+
+Cross-platform: Supports Linux and macOS.
+
+Control-M integration: Scripts optionally retrieve environment settings (like node, agent names) if connected to Control-M.
+
+Modular: Scripts can be run independently or chained together in automation flows.
 
 
 # Overview
