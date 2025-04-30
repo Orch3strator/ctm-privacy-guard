@@ -10,39 +10,22 @@ printf "\033c"
 
 function license() {
     printf "${DARK_GREY}%s${RESET}\n" ""
-    printf "${DARK_GREY}%s${RESET}\n" " GPL-3.0-only or GPL-3.0-or-later"
-    printf "${DARK_GREY}%s${RESET}\n" " Copyright (c) 2021 BMC Software, Inc."
+    printf "${DARK_GREY}%s${RESET}\n" " Apache License Version 2.0, January 2004"
+    printf "${DARK_GREY}%s${RESET}\n" " Copyright (c) 2025 Werkstatt 72, LLC."
     printf "${DARK_GREY}%s${RESET}\n" " Author: Volker Scheithauer"
-    printf "${DARK_GREY}%s${RESET}\n" " E-Mail: orchestrator@bmc.com"
+    printf "${DARK_GREY}%s${RESET}\n" " E-Mail: "
     printf "${DARK_GREY}%s${RESET}\n" ""
-    printf "${DARK_GREY}%s${RESET}\n" " This program is free software: you can redistribute it and/or modify"
-    printf "${DARK_GREY}%s${RESET}\n" " it under the terms of the GNU General Public License as published by"
-    printf "${DARK_GREY}%s${RESET}\n" " the Free Software Foundation, either version 3 of the License, or"
-    printf "${DARK_GREY}%s${RESET}\n" " (at your option) any later version."
+    printf "${DARK_GREY}%s${RESET}\n" " http://www.apache.org/licenses/"
     printf "${DARK_GREY}%s${RESET}\n" ""
     printf "${DARK_GREY}%s${RESET}\n" " This program is distributed in the hope that it will be useful,"
     printf "${DARK_GREY}%s${RESET}\n" " but WITHOUT ANY WARRANTY; without even the implied warranty of"
     printf "${DARK_GREY}%s${RESET}\n" " MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the"
-    printf "${DARK_GREY}%s${RESET}\n" " GNU General Public License for more details."
+    printf "${DARK_GREY}%s${RESET}\n" " Apache License Version 2.0 for more details."
     printf "${DARK_GREY}%s${RESET}\n" ""
-    printf "${DARK_GREY}%s${RESET}\n" " You should have received a copy of the GNU General Public License"
-    printf "${DARK_GREY}%s${RESET}\n" " along with this program.  If not, see <https://www.gnu.org/licenses/>."
 }
-
-function ctmLogo() {
-    printf "${BLUE}%s${RESET}\n" ""
-    printf "${BLUE}%s${RESET}\n" "  @@@@@@@   @@@@@@   @@@  @@@  @@@@@@@  @@@@@@@    @@@@@@   @@@                  @@@@@@@@@@   "
-    printf "${LIGHT_BLUE}%s${RESET}\n" " @@@@@@@@  @@@@@@@@  @@@@ @@@  @@@@@@@  @@@@@@@@  @@@@@@@@  @@@                  @@@@@@@@@@@  "
-    printf "${LIGHT_BLUE}%s${RESET}\n" " !@@       @@!  @@@  @@!@!@@@    @@!    @@!  @@@  @@!  @@@  @@!                  @@! @@! @@!  "
-    printf "${CYAN}%s${RESET}\n" " !@!       !@!  @!@  !@!!@!@!    !@!    !@!  @!@  !@!  @!@  !@!                  !@! !@! !@!  "
-    printf "${LIGHT_CYAN}%s${RESET}\n" " !@!       @!@  !@!  @!@ !!@!    @!!    @!@!!@!   @!@  !@!  @!!       @!@!@!@!@  @!! !!@ @!@  "
-    printf "${YELLOW}%s${RESET}\n" " !!!       !@!  !!!  !@!  !!!    !!!    !!@!@!    !@!  !!!  !!!       !!!@!@!!!  !@!   ! !@!  "
-    printf "${YELLOW}%s${RESET}\n" " :!!       !!:  !!!  !!:  !!!    !!:    !!: :!!   !!:  !!!  !!:                  !!:     !!:  "
-    printf "${ORANGE}%s${RESET}\n" " :!:       :!:  !:!  :!:  !:!    :!:    :!:  !:!  :!:  !:!   :!:                 :!:     :!:  "
-    printf "${ORANGE}%s${RESET}\n" "  ::: :::  ::::: ::   ::   ::     ::    ::   :::  ::::: ::   :: ::::             :::     ::   "
-    printf "${ORANGE}%s${RESET}\n" "  :: :: :   : :  :   ::    :      :      :   : :   : :  :   : :: : :              :      :    "
-    printf "${ORANGE}%s${RESET}\n" ""
-}
+################################################################################
+# End of license
+################################################################################
 
 # Logging function
 log_entry() {
@@ -358,7 +341,6 @@ function display_info() {
 
 # Show license, logo and info
 license
-ctmLogo
 display_info
 
 function display_project_details() {
