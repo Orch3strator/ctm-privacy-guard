@@ -6,7 +6,7 @@ Control-M Privacy Guard Integration
 These scripts provide a complete toolkit for managing GPG keys and GPG-encrypted files across Control-M agents and servers.
 Each script follows a common structure, including usage help (--help), colorful output, logging, and optional parameters.
 
-![Notice](/NOTICE.md)
+📢 [Notice](/NOTICE.md)
 
 ## 🛠 Available Scripts
 
